@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app='weatherApp'>
+<html lang="en-us" ng-app='WeatherApp'>
     <head>
         <title>AngularJS Weather Forecast SPA</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -18,7 +18,7 @@
         <script src="//code.angularjs.org/1.6.9/angular.min.js"></script>
         <script src="//code.angularjs.org/1.6.9/angular-route.min.js"></script>
         <script src="//code.angularjs.org/1.6.9/angular-resource.min.js"></script>
-        <script src="app.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
 
@@ -36,10 +36,14 @@
 			</nav>
 		</header>
 
-        <div class="container">
+    <div class="container">
 
+      <div ng-view></div>
 
 		</div>
 
+    <!-- Controllers -->
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/ForecastController.js"></script>
     </body>
 </html>
