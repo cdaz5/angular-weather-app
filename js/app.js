@@ -1,10 +1,7 @@
 var WeatherApp = angular.module('WeatherApp', ['ngRoute', 'ngResource']);
 
 WeatherApp.config(function($routeProvider, $locationProvider) {
-	$locationProvider.html5Mode({
-		enabled: true,
-		requireBase: false
-	});
+	$locationProvider.hashPrefix('');
 
 	$routeProvider
 		.when('/', {
@@ -12,6 +9,10 @@ WeatherApp.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'views/home.html'
 		})
 		.when('/forecast', {
+			controller: 'ForecastController',
+			templateUrl: 'views/forecast.html'
+		})
+		.when('/forecast/:days', {
 			controller: 'ForecastController',
 			templateUrl: 'views/forecast.html'
 		});
